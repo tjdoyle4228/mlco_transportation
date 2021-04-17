@@ -1,0 +1,57 @@
+.wrapper {
+    margin : 10px;
+    background-color: lightslategray;
+    justify-content: space-evenly;
+}
+.login {
+    width: 300px;
+}
+.create {
+display: inline-block;
+}
+.inner_box {
+    display: inline-block;
+    margin: 20px;
+}
+#right_box.inner_box {
+    vertical-align: top;
+}
+.login {
+    display: inline-block;
+    vertical-align: top;
+}
+form{
+    margin: 20px;
+}
+.button {
+    margin: 15px;
+}
+.invoice_checks {
+    display: inline-block;
+    border: 2px solid black;
+    vertical-align: top;
+}
+table {
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+ th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: darkblue;
+    color: white;
+}
+  td {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: gray;
+    color: white;
+}

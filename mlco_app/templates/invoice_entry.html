@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet"  href= "{% static 'style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+</head>
+<body>
+    <div class = 'wrapper' >
+        <h2><a href="/invoiceData">Invoice Data</a> | <a href="/addVendorPage">Add Vendor</a> | <a href="/">Logout</a></h2>
+        <div class="box">
+            <form action="/invoice/log" method="POST"> 
+                {% csrf_token %}
+                <div class="inner_box">
+                    <label>Vendor: </label><br>
+                        <input type="text" name ='vendor'><br>
+                    <label>Invoice number: </label><br>
+                        <input type="text" name ='invoice_number'><br>
+                    <label>Control Date: </label><br>
+                        <input type="date" name ='control_date'><br>
+                    <label>Route Code: </label><br>
+                        <input type="text" name ='route_id'><br>
+                    <label>Miles: </label><br>
+                        <input type="number" name ="miles"><br>
+                    <label>Mileage Charge: </label><br>
+                        <input type="number" name ="milage_charge"><br>
+                    <label>Flat Rate Charge: </label><br>
+                        <input type="number" name ="flat_rate"><br>
+                    <label>Tractor Fuel Charge: </label><br>
+                        <input type="number" name ="tractor_fuel_charge"><br>
+                    <label>Trailer Fuel Charge: </label><br>
+                        <input type="number" name ="trailer_fuel_charge"><br>
+                </div>
+                <div class="inner_box" id = 'right_box'>
+                    <label>Unload Hours: </label><br> 
+                        <input type="number" name ="unload_hours"><br>
+                    <label>Layover Charge: </label><br> 
+                        <input type="number" name ="layover_charge"><br>
+                    <label>Stop Count: </label><br>
+                        <input type="number" name ="stop_count"><br>  
+                    <label>Stop Charge: </label><br>
+                        <input type="number" name ="stop_charge"><br>
+                    <label>Yard Charge: </label><br>
+                        <input type="number" name ="yard_charge"><br>
+                    <label>Toll Charge: </label><br>
+                        <input type="number" name ="toll_charge"><br>
+                    <label>Holiday Charge: </label><br>
+                        <input type="number" name ="holiday_charge"><br>
+                    <label>Detention Charge: </label><br>
+                        <input type="number" name ="detention_charge"><br>
+                    <label>Back-haul Credit: </label><br>
+                        <input type="number" name ="backhaul_credit "><br>
+                    <input type="submit" value="Log Invoice" class="button"><br>
+  
+            </form>
+            <div class = 'invoice_checks'>
+                
+            </div>
+        </div>
+
+
+    </div>  
+</body>
+</html>
